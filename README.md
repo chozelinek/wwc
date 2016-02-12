@@ -16,7 +16,7 @@ Though we'll be working with blank notebooks in our training sessions, everythin
 
 Below is a basic overview of the four-session lesson plan. You can click the headings to view complete versions of the Jupyter Notebooks we'll be using in each session. The materials are always evolving, and pull requests are always welcome.
 
-## [Session 1: Orientation](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-1-complete.md)
+## [Session 1: Orientation](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-1-complete.ipynb)
 
 In this session, you will learn how to use the Jupyter Notebook, as well as how to complete basic tasks with Python/NLTK. 
 
@@ -32,7 +32,7 @@ In this session, you will learn how to use the Jupyter Notebook, as well as how 
 * Writing functions
 * Creating frequency distributions
 
-## [Session 2: Corpus linguistic tasks](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-2-complete.md)
+## [Session 2: Corpus linguistic tasks](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-2-complete.ipynb)
 
 In this session, we put our existing skills to work in order to investigate the corpora that come bundled with NLTK. The major kinds of processes we cover are:
 
@@ -43,23 +43,52 @@ In this session, we put our existing skills to work in order to investigate the 
 * Collocates
 * Concordancing
 
-We finish off the session by writing a regular-expression based concordancer.
+## [Session 3: Working with corpora](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-3-complete.ipynb)
 
-## [Session 3: Working with corpora](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-3-complete.md)
+* POS tagging
+* Lemmatisation
+* Exploring annotated data
+* Writing a concordancer
 
-Now that we need know the basics of Python and corpus linguistics, we need to figure out how to get our own data into forms that we can interrogate.
+## [Session 4: Regular expressions](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-4-complete.ipynb)
 
-> More details forthcoming!
+This lesson focusses on regular expressions, as implemented in Python.
 
-## [Session 4: Getting the most out of what we've learned](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-4-complete.md)
+* Introduction to the syntax
+* Regular expressions in Python: `compile()`, `match()`, `findall()`, `search()`
+* Regular expressions in the Shell terminal: `sed`, `grep`
+* Resources around the web
+  * Checkers
+  * Cheatsheets
+  * Crosswords
+
+## [Session 5: HTML and XML](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/xml-session-complete.ipynb)
+
+This session introduces HTML and XML markup, and how they can be manipulated with Python using `beautifulsoup` and `lxml`.
+
+## [Session 6: File operations](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/files-directories-operations.ipynb)
+
+Python can be used to work with local and remote files. This session centres on using the `os`, `glob` and `fnmatch` modules to find, create, copy, move and delete files and directories.
+
+##[Session 7:  Using Git](https://github.com/interrogator/wwc/blob/master/resources/using-git.md)
+
+It's nice to have your Python code under version control, so that you never lose anything important. In this session, we cover:
+
+* Downloading and installing [GitHub Desktop](https://desktop.github.com)
+* Creating, forking repositories
+* Adding to our lesson materials:
+ 	* Updating READ ME 
+ 	* Adding student feedback
+
+## [Session 8: Getting the most out of what we've learned](https://github.com/interrogator/wwc/blob/master/resources/completed-notebooks/nltk-session-7-complete.md)
 
 Our final session involves:
 
 * Answering important issues raised by students in earlier sessions
 * Discussing local workflows:
   * How do we get everything set up on own own devices?
-  * How do we get help when things go wrong?
-  * How should I store/share my code?
+ 	* How do we get help when things go wrong?
+ 	* How should I store/share my code?
 * Brainstorming ideas for the future
 
 ## Adding to this repository
