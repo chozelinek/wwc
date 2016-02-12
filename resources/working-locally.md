@@ -12,9 +12,133 @@ We will show you how to:
 - which packages you will need to run the notebooks of the WwC python sessions
 - how to work with jupyter notebooks
 
-The instructions have been tested for Mac OS X 10.11 El Capitan, Ubuntu 15.10 Wily Werewolf, and Windows 10.
+The instructions have been tested for Mac OS X 10.11 El Capitan, Ubuntu 15.10 Wily Werewolf, and Windows 7.
 
-## Python 3
+We will provide instructions to set up your environment:
+
+- easy
+- advanced
+
+*Easy* is aimed at getting Python 3 and all necessary packages installed with a minimum effort. This option is good for you if disk space is not a problem, you have a good internet connection, and a few minutes.
+
+*Advanced* is a a bit more involved and it is aimed at those who just want to install the minimum requirements. This is mostly command-line based. And for those how know what they are doing ;-)
+
+## Easy
+
+The easiest cross-platform solution is to use [`Anaconda`](https://www.continuum.io). `Anaconda` is a Python distribution and package manager maintained by a company, *Continuum*.
+
+`conda` comes with very complete [documentation](http://conda.pydata.org/docs). We will follow their materials.
+
+### Install `conda`
+
+Follow the appropriate instructions for your operating system <http://conda.pydata.org/docs/install/full.html>.
+
+### Get the notebooks
+
+You can get them from GitHub. If you want to get detailed instructions, take a look at `using-git.md`.
+
+1. Fork interrogator/wwc
+1. Clone yourgithub/wwc
+
+### Run the notebooks
+
+#### Windows
+
+#### Mac
+
+You will see on your Desktop an icon called `Launcher`, if you don't just go to the folder where `conda` is installed `~/ananconda`, you will see the `Launcher` there.
+
+1. Double click on `Launcher`
+1. Click on `ipython-notebook`'s `Launch` button.
+
+Two things will happen:
+
+1. a terminal window opens
+1. a new browser tab opens
+
+Keep open the terminal window, this is running a server locally. Close it when you are done working with the notebooks. Otherwise you want be able to run the notebooks.
+
+The browser tab displays the contents of your home folder. Navigate to the folder where you have cloned `wwc`. Click on any notebook you want to use. When you are done, shut down the notebook, and, in the terminal window type `Control-C`, confirm by typing `y` and press `Enter`.
+
+#### Linux
+
+### Try `conda`
+
+If you want to learn more about `conda` and test that everything is working, you might be interested in `conda`'s [test drive](http://conda.pydata.org/docs/test-drive.html).
+
+## Advanced
+
+For the advanced we have to paths to follow:
+
+- `conda`, if you use Windows, or if you want to stick to `conda` in any other operating system
+- `official`, if you use Mac/Linux, or you don't want to use `conda`
+
+### The `conda` way
+
+#### Windows
+
+#### Mac
+
+##### Installing Python 3
+
+Read and follow the [instructions](http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install):
+
+1. Download the appropriate version for your operating system <https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh>
+1. Change to the directory where you download it `cd ~/Downloads`
+1. Run the: `bash Miniconda3-latest-MacOSX-x86_64.sh`
+1. Follow the instructions on screen
+1. Source the `source ~/.bash_profile`
+
+Now, your default Python in Mac is conda's Python 3.
+
+#### Linux
+
+### The *official* way
+
+#### Mac
+
+##### Installing Python 3 with homebrew
+
+Mac OS X comes with a python 2 distribution preinstalled. You still will need python 3. We will use in this tutorial the software manager `homebrew` <http://brew.sh>.
+
+1. install Command Line Tools for Xcode
+```shell
+xcode-select --install
+```
+1. install homebrew
+```shell
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+1. install python3
+```shell
+brew install python3
+```
+1. linkapps
+```shell
+brew linkapps python3
+```
+1. install yolk to keep track of your python packages (optional)
+```shell
+pip3 install yolk
+```
+
+Now, you check again if python 3 is installed by running:
+
+```shell
+python3 --version
+```
+
+You should see `Python 3.5.1`.
+
+#####
+
+#### Linux
+
+##### Installing Python 3
+
+Congratulations! Latest Ubuntu's releases come with Python 3.4 out of the box. The version can be a bit behind the latest official python 3 (3.5) release. But the notebooks should work anyway. You need to install `pip`, the python package manager.
+
+#### Python 3
 
 The first question we need to answer is:
 
@@ -31,15 +155,16 @@ If you get something like `Python 3.5.0`, congratulations! You have python 3 ins
 If you DO have python 3 already installed in your machine, check the version you have. If the version is >= than 3.4. proceed to section [Python virtual environments](#python-virtual-environments), otherwise, you will need to install pip, go to section [Installing pip](#installing-pip). If you DO NOT have python 3 installed in your computer follow the instructions in section [Installing python 3](#installing-python-3).
 
 
-## Installing python 3
+#### Installing Python 3
 
 Depending on the platform you are working, you will need to follow a different procedure:
 
 - [Mac OS X](#installing-python-3-for-mac-os-x)
 - [Ubuntu](#installing-python-3-for-ubuntu)
-- [Windows](#installing-python-3-for-windows)
 
 ### Installing python 3 for Mac OS X
+
+#### Installing python 3 with homebrew
 
 Mac OS X comes with a python 2 distribution preinstalled. You still will need python 3. We will use in this tutorial the software manager `homebrew` <http://brew.sh>.
 
@@ -74,23 +199,15 @@ You should see `Python 3.5.0`.
 
 If you were successful go to section [Python virtual environments](#python-virtual-environments).
 
+
+
+
+
 ### Installing python 3 for Ubuntu
 
 Congratulations! Latest Ubuntu's releases come with Python 3.4 out of the box. The version can be a bit behind the latest official python 3 (3.5) release. But the notebooks should work anyway. You need to install `pip`, the python package manager.
 
 Go to [Installing pip](#installing-pip).
-
-### Installing python 3 for Windows
-
-There are several ways of installing Python 3 in Windows.
-1. Using the official release and `pip`, or
-1. Using a third party distribution like `Anaconda` and its package manager `conda`.
-
-[`Anaconda`](https://www.continuum.io/downloads) is well known and they provide first class software. Be aware that `Anaconda` is maintained by a company (Continuum) and it is released under a freemium license model. As long as the company does well, `Anaconda` will be there.
-
-1. Go to the Downloads page at the Anaconda Website <https://www.continuum.io/downloads>
-1. Choose the right version for your operating system (32-bit oder 64-bit)
-1. Run the installer
 
 ## Installing pip
 
@@ -102,10 +219,6 @@ pip3 --version
 
 If you DO have `pip3` installed go to section [Python virtual environments](#python-virtual-environments).
 If you DO NOT have `pip3` follow this instructions: <http://pip.de>
-
-### Installing pip for Mac OS X
-
-If you followed the instructions to install python 3 with homebrew, you don't need to install pip. The latest versions come with pip already.
 
 ### Installing pip for Ubuntu
 
