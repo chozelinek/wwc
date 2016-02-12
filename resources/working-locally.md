@@ -88,12 +88,9 @@ There are several ways of installing Python 3 in Windows.
 
 [`Anaconda`](https://www.continuum.io/downloads) is well known and they provide first class software. Be aware that `Anaconda` is maintained by a company (Continuum) and it is released under a freemium license model. As long as the company does well, `Anaconda` will be there.
 
-1. Go to the Downloads page at the official Website <https://www.python.org/downloads/>
-1. Where it reads `Looking for Python with a different OS?`, click on `Windows`
-1. Scroll down until `Python 3.5.1` and then click on Download `Windows x86-64 executable installer`.
+1. Go to the Downloads page at the Anaconda Website <https://www.continuum.io/downloads>
+1. Choose the right version for your operating system (32-bit oder 64-bit)
 1. Run the installer
-1. Tick the box: `Add Python 3.5 to PATH`
-1. Click on `Install Now`
 
 ## Installing pip
 
@@ -196,7 +193,7 @@ pip install virtualenv
 ```
 1. install `virtualenvwrapper` (to ease `virtualenv` mangagement)
 ```shell
-pip3 install virtualenvwrapper
+pip install virtualenvwrapper-win
 ```
 
 The next step is to set up `virtualenv` and `virtualenvwrapper`.
@@ -237,16 +234,24 @@ source .bashrc
 
 #### Setting up virtualenv and virtualenvwrapper for Windows
 
+Good news! You don't need to set up anything.
+
 ### Working with virtual environments
 
 We will show you how to set up a virtual environment for WwC python sessions.
 
-#### Create a new virtual environment
+#### Create a new virtual environment in Mac/Linux
 
 You only have to this once.
 
 ```shell
 mkvirtualenv --python=python3 wwc
+```
+
+#### Create a new virtual environment in Windows
+
+```shell
+mkvirtualenv.bat wwc
 ```
 
 #### Work on the new virtual environment
